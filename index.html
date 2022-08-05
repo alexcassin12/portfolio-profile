@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="theme-color" content="#ffffff">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- google icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script defer type="module" src="./js/index.js"></script>
+    <title>Alex Cassin - Front End Developer</title>
+  </head>
+  <body>
+    <div class="preloader-left"></div>
+    <img class="preloader-logo" src="./images/preloader-logo.gif" alt="Loading Icon"></img>
+    <div class="preloader-right"></div>
+    <nav class="nav-bar">
+      <a href="#home"><span class="material-symbols-outlined home-btn"> cottage </span></a>
+      <div class="right-side-nav-icons">
+        <a href="./images/github-icon.png" target="_blank" download>
+          <img
+            class="cv-download-btn nav-btn"
+            src="./images/cv-download-icon.png"
+            alt="CV Download Icon"
+          />
+        </a>
+        <a href="https://github.com/alexcassin12" target="_blank">
+          <img
+            class="github-btn nav-btn"
+            src="./images/github-icon.png"
+            alt="Github Logo"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/alexcassin" target="_blank">
+          <img
+            class="linkedin-btn nav-btn"
+            src="./images/linkedin-icon.png"
+            alt="Linkedin Logo"
+          />
+        </a>
+      </div>
+    </nav>
+    
+    <span id="home"></span>
+    <section class="page-1 section">
+      <div class="page-1-complete-wrapper">
+        <div class="main-img-wrapper">
+          <img class="profile-img" src="./images/pic-and-ring.png" />
+        </div>
+        <div class="left-side-content">
+          <div class="title">
+            <h1>Hello, I'm Alex.</h1>
+            <h2>I'm a front-end web developer from London, UK</h2>
+          </div>
+          <div class="cards-row">
+            <a href="#about-me">
+              <div class="card-1 card">
+                <h3>About me</h3>
+              </div>
+            </a>
+            <a href="#skills">
+              <div class="card-2 card">
+                <h3>Skills</h3>
+              </div>
+            </a>
+            <a href="#portfolio">
+              <div class="card-3 card">
+                <h3>Projects</h3>
+              </div>
+            </a>
+            <a href="#contact">
+              <div class="card-4 card">
+                <h3>Contact</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <span id="about-me"></span>
+    <section class="page-2 section sliding-section">
+      <div class="right-title-row">
+        <svg viewBox="0 0 907 2" fill="none">
+          <path
+            d="M1 1L906.445 1"
+            stroke="rgba(255, 255, 255, 0.5)"
+            stroke-linecap="round"
+          />
+        </svg>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-me-img-row">
+        <div class="img-wrapper coding-pic sliding-img">
+          <img
+            class="about-me-img lazy-img"
+            src="./images/coding-pic-lazy.png"
+            data-src="./images/coding-pic.png"
+            alt="About Me Image 1"
+          />
+          <div class="img1-cover"></div>
+        </div>
+        <div class="img-wrapper">
+          <img
+            class="about-me-img music-pic lazy-img"
+            src="./images/cruise-pic-lazy.png"
+            data-src="./images/cruise-pic.png"
+            alt="About Me Image 1"
+          />
+          <div class="img2-cover"></div>
+        </div>
+        <div class="img-wrapper hobbies-pic sliding-img">
+          <img
+            class="about-me-img lazy-img"
+            src="./images/hobbies-pic-lazy.png"
+            data-src="./images/hobbies-pic.png "
+            alt="About Me Image 1"
+          />
+          <div class="img3-cover"></div>
+        </div>
+      </div>
+      <div class="about-me-text-container hide-text-container">
+        <p class="text-section-1 hide-text-section">
+          Hello, I’m Alex, and I love bringing ideas and designs to life on the web!
+          <br><br>
+          Having always been interested in tech, I discovered my passion for web development in 2020, when I began to learn basic HTML and CSS, and loved watching these seemingly gibberish lines of text grow into dynamic and engaging web pages.
+          <br><br>
+          Since then I have completed courses in HTML, CSS and JavaScript, as well as built a portfolio of websites that show off a variety of the skills I have acquired and developed throughout my journey so far.  I am currently diversifying my skillset by studying Git, React, TypeScript and Bootstrap, so that I can build even more interesting and sophisticated websites in the future.
+        </p>
+        <p class="text-section-2 hide-text-section">
+          Another passion of mine is music, having played in bands since I was 13. Aside from performing, I was often tasked with managing the band’s online presence and media, which included creating simple websites (using Wix) and designing business cards.
+          <br><br>
+          In 2012, I began to combine my love of both technology and music by studying music tech at both college and university.
+          <br><br>
+          After graduating university, I had the opportunity to work as a musician for a number of premium cruise lines. Throughout this time I got to travel the world, seeing some extraordinary places (the photo is from Bergen in Norway, strongly recommend!) and meeting amazing people.
+        </p>
+        <p class="text-section-3 hide-text-section">
+          When I’m not studying or working on my next project, I still love to be around music, whether it’s playing, producing or going to see live gigs.
+          <br><br>
+          I’m a big sports fan, especially American Football (I haven’t missed a Packers game for 3 years!), but I also play football regularly.
+          <br><br>
+          I'm also a fan of quizes and board games, more recently developing a keen interest in chess.
+        </p>
+      </div>
+    </section>
+    <span id="skills"></span>
+    <section class="page-3 section sliding-section">
+      <div class="left-title-row">
+        <h2 class="my-toolkit-title">My Toolkit</h2>
+        <svg viewBox="0 0 907 2" fill="none">
+          <path
+            d="M1 1L906.445 1"
+            stroke="rgba(255, 255, 255, 0.5)"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+      <div class="toolkit-row">
+        <div class="icon-wrapper">
+          <img src="./images/html5-icon.png" alt="HTML5 Icon" />
+          <h4>HTML5</h4>
+        </div>
+        <div class="icon-wrapper">
+          <img src="./images/css3-icon.png" alt="CSS3 Icon" />
+          <h4>CSS3</h4>
+        </div>
+        <div class="icon-wrapper">
+          <img src="./images/sass-icon.png" alt="SASS Icon" />
+          <h4>SASS</h4>
+        </div>
+        <div class="icon-wrapper">
+          <img src="./images/javascript-icon.png" alt="JavaScript Icon" />
+          <h4>JavaScript (ES6+)</h4>
+        </div>
+      </div>
+      <div class="right-title-row">
+        <svg viewBox="0 0 907 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1 1L906.445 1"
+            stroke="rgba(255, 255, 255, 0.5)"
+            stroke-linecap="round"
+          />
+        </svg>
+        <h2 class="currently-studying-title">Currently Studying</h2>
+      </div>
+      <div class="currently-studying-row">
+        <div class="icon-wrapper">
+          <img src="./images/git-icon.png" alt="Git Icon" />
+          <h4>Git</h4>
+        </div>
+        <div class="icon-wrapper">
+          <img src="./images/react-icon.png" alt="React Icon" />
+          <h4>React</h4>
+        </div>
+        <div class="icon-wrapper">
+          <img src="./images/typescript-icon.png" alt="TypeScript Icon" />
+          <h4>TypeScript</h4>
+        </div>
+        <div class="icon-wrapper">
+          <img src="./images/bootstrap-icon.png" alt="Bootstrap Icon" />
+          <h4>Bootstrap 5</h4>
+        </div>
+      </div>
+    </section>
+    <span id="portfolio"></span>
+    <section class="page-4 section sliding-section">
+      <div class="left-title-row">
+        <h2>Projects</h2>
+        <svg viewBox="0 0 907 2" fill="none">
+          <path
+            d="M1 1L906.445 1"
+            stroke="rgba(255, 255, 255, 0.5)"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+      <div class="filmbys-row portfolio-row">
+        <a href="https://filmbys.netlify.app" target="_blank">
+          <img
+            class="portfolio-img filmbys-img lazy-img"
+            src="./images/filmbys-laptop-mobile-img-lazy.png"
+            data-src="./images/filmbys-laptop-mobile-img.svg"
+            alt="Filmbys Image"
+          />
+        </a>
+        <div class="text-box">
+          <h3>Filmby's - Movie Review Site</h3>
+          <p>
+            Filmby's is a website that allows users to view critics' ratings of movies, as well as give their personal ratings and build their own ranked list of their favourite films. As a movie buff, I always found myself checking IMDb, Rotten Tomatoes and Metacritic to see how highly a movie is regarded, but could never find a site where all of those scores were available in the same place. So, I created Filmbys!
+            <br><br>
+            I built Filmby's using HTML, CSS/SASS and JavaScript. The JavaScript was written using an MVC style architecture, and contains AJAX (async/await, fetch API), ES6 classes and modules, as well as a lot of data handling and manipulation (including sending and receiving data to/from local storage). The site functions like an app, where the vast majority of the content is dynamically displayed on a single page based on user interaction.
+          </p>
+          <span class="aside">(In detail breakdown available in Github README)</span>
+          <div class="portfolio-links filmby-links">
+            <div class="link-to-code">
+              <a href="https://github.com/alexcassin12" target="_blank"><h4>View Code</h4><span class="material-symbols-outlined view-code-icon">
+                code
+                </span></a>
+            </div>
+            <div class="link-to-site">
+              <a href="https://filmbys.netlify.app" target="_blank"><h4>View Site</h4><span class="material-symbols-outlined view-site-icon">
+                  devices
+                 </span></a>
+            </div>
+          </div>
+        </div>
+        <div class="yellow-background-box"></div>
+      </div>
+      <div class="flora-row portfolio-row">
+        <a href="https://foreverflora.netlify.app" target="_blank">
+          <img
+            class="portfolio-img flora-img lazy-img"
+            src="./images/foreverflora-laptop-mobile-img-lazy.png"
+            data-src="./images/foreverflora-laptop-mobile-img.svg"
+            alt="Forever Flora Image"
+          />
+        </a>
+        <div class="text-box">
+        <h3>Forever Flora - E-commerce Site</h3>
+        <p>
+          Forever Flora is a demo e-commerce website I built for a terrarium business I started in late 2021. The business currently operates on Etsy, so I wanted to build this to explore the possibility of transitioning away from an established online marketplace, as well as to develop my skills in building a larger, multi-page website.
+
+          <br><br>
+
+          Forever Flora was built using HTML, CSS/SASS and JavaScript. I put a lot of effort into the responsiveness of the site, which included creating image carousels and a collapsing burger menu that could be triggered by a mixture of CSS media queries/SASS Mixins and JavaScript event listeners.
+        </p>
+        <span class="aside">(In detail breakdown available in Github README)</span>
+        
+        <div class="portfolio-links flora-links">
+          <div class="link-to-code">
+            <a href="https://github.com/alexcassin12" target="_blank"><h4>View Code</h4><span class="material-symbols-outlined view-code-icon">
+              code
+              </span></a>
+          </div>
+          <div class="link-to-site">
+            <a href="https://foreverflora.netlify.app" target="_blank"><h4>View Site</h4><span class="material-symbols-outlined view-site-icon">
+                devices
+               </span></a>
+          </div>
+        </div>
+        </div>
+        <div class="yellow-background-box"></div>
+      </div>
+      <div class="profile-row portfolio-row">
+        <img
+          class="portfolio-img profile-img lazy-img"
+          src="./images/profile-laptop-img-lazy.png"
+          data-src="./images/profile-laptop-img.svg"
+          alt="Personal Profile Image"
+        />
+        <div class="text-box">
+          <h3>Profile Site</h3>
+          <p>
+            I build this site as a personal profile page, where user's could view information about me, my coding experience, and the projects I have developed. I chose to build this site from scratch, rather than use a template, to further develop my skills, and so that it could be included in my portfolio of work.
+
+            <br> <br>
+
+            This site was built using HTML, CSS/SASS and JavaScript. The site is all contained on a single page, so to make it engaging I used the JavaScript Intersection Observer API to dynamically style elements based on the users scroll position. This also allowed me to implement lazy-loading images to improve loading times.  While building this site I also gained some experience using Figma, as I felt the UX/UI design was particularly important.
+          </p>
+          <span class="aside">(In detail breakdown available in Github README)</span>
+          <div class="portfolio-links profile-links">
+            <div class="link-to-code">
+              <a href="https://github.com/alexcassin12" target="_blank"><h4>View Code</h4><span class="material-symbols-outlined view-code-icon">
+                code
+                </span></a>
+            </div>
+          </div>
+       </div>
+    <div class="yellow-background-box"></div>
+    </section>
+    <span id="contact"></span>
+    <section class="page-5 section sliding-section">
+      <div class="center-title">
+        <svg viewBox="0 0 907 2" fill="none">
+          <path
+            d="M1 1L906.445 1"
+            stroke="rgba(255, 255, 255, 0.5)"
+            stroke-linecap="round"
+          />
+        </svg>
+        <h2>Contact</h2>
+        <svg viewBox="0 0 907 2" fill="none">
+          <path
+            d="M1 1L906.445 1"
+            stroke="rgba(255, 255, 255, 0.5)"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+      <p>Please feel free to get in contact!</p>
+
+    <form class="contact-form" action="https://formsubmit.co/5e621829459e61eb7956e1b3a5db9bea" method="POST">
+      <input type="text" name="_honey" style="display: none">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://www.alexcassin.co.uk">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea class="message" type="text" name="comments" placeholder="Please write your message here." required></textarea>
+      <button type="submit">Send</button>
+ </form>
+    </section>
+  </body>
+</html>

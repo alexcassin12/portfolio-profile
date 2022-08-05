@@ -1,0 +1,969 @@
+@import "./_var.scss";
+@import "./_breakpoints.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-darkblue;
+  background-image: url("./../images/background-img.png");
+  background-attachment: fixed;
+  background-size: cover;
+  min-width: 280px;
+}
+
+// LOADING SCREEN CODE
+.preloader-left {
+  background: #000;
+  height: 100vh;
+  width: 50%;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  transition: width 700ms ease-in, opacity 700ms ease-in;
+}
+
+.preloader-logo {
+  position: fixed;
+  width: 100px;
+  left: 46%;
+  top: 40%;
+  z-index: 100;
+
+  @include breakpoint(700px) {
+    left: 45%;
+  }
+  @include breakpoint(550px) {
+    left: 41%;
+  }
+  @include breakpoint(380px) {
+    left: 36%;
+  }
+}
+.preloader-right {
+  background: #000;
+  height: 100vh;
+  width: 50%;
+  position: fixed;
+  right: 0;
+  z-index: 99;
+  transition: width 700ms ease-in, opacity 700ms ease-in;
+}
+
+// NAVIGATION ANCHORS
+#home,
+#about-me,
+#skills,
+#portfolio,
+#contact {
+  position: relative;
+  top: -110px;
+  visibility: hidden;
+
+  @include desktop {
+    top: -110px;
+  }
+  @include laptop {
+    top: -105px;
+  }
+  @include tablet {
+    top: -102px;
+  }
+  @include mobile {
+    top: -95px;
+  }
+}
+
+// CODE FOR DYANMIC JS CHANGES
+.lazy-img {
+  filter: blur(4px);
+}
+
+.push-img-left-and-hide {
+  transform: translateX(-120%);
+  opacity: 0;
+}
+
+.push-img-right-and-hide {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+// NAV BAR CODE
+.nav-bar {
+  background-color: $bg-light-tone;
+  z-index: 20;
+  position: relative;
+  display: flex;
+  flex: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  .home-btn {
+    font-size: 4rem;
+    color: $site-yellow;
+    z-index: 2;
+    margin-left: 20px;
+
+    @include breakpoint(311px) {
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      font-variation-settings: "FILL" 1;
+      cursor: pointer;
+    }
+  }
+
+  .right-side-nav-icons {
+    display: flex;
+    flex: row nowrap;
+    gap: 20px;
+    margin-right: 20px;
+
+    .nav-btn {
+      width: 50px;
+      z-index: 2;
+      color: $site-yellow;
+
+      @include breakpoint(311px) {
+        width: 30px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+/// ALL SECTIONS CODE
+.section {
+  transition: transform 0.7s, opacity 0.7s;
+  max-width: 1910px;
+  margin: auto;
+
+  div[class*="title-row"] {
+    display: flex;
+    width: 90%;
+    margin: 0 auto 90px auto;
+    flex: row nowrap;
+    gap: 5%;
+    align-items: center;
+
+    @include desktop {
+      margin: 0 auto 75px auto;
+    }
+    @include tablet {
+      margin: 0 auto 55px auto;
+    }
+    @include mobile {
+      margin: 0 auto 40px auto;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      text-shadow: 4px 4px $site-box-shadow;
+      @include desktop {
+        font-size: 2rem;
+      }
+      @include breakpoint(1010px) {
+        font-size: 1.7rem;
+      }
+      @include breakpoint(860px) {
+        font-size: 1.4rem;
+        text-shadow: 3px 3px $site-box-shadow;
+      }
+      @include breakpoint(707px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 60%;
+    }
+  }
+
+  .left-title-row {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .right-title-row {
+    justify-content: flex-end;
+    text-align: right;
+  }
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.sliding-section {
+  margin-bottom: 90px;
+  @include desktop {
+    margin-bottom: 75px;
+  }
+  @include tablet {
+    margin-bottom: 55px;
+  }
+  @include mobile {
+    margin-bottom: 40px;
+  }
+}
+
+// HOME SECTION
+.page-1 {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .page-1-complete-wrapper {
+    display: flex;
+    flex: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    // border: 2px solid red;
+    margin-bottom: 30px;
+
+    @include tablet {
+      display: block;
+    }
+
+    .main-img-wrapper {
+      width: 30%;
+      order: 2;
+
+      @include tablet {
+        width: 50%;
+        margin: 10px auto 50px auto;
+
+        @include mobile {
+          margin: 10px auto 20px auto;
+        }
+      }
+
+      .profile-img {
+        display: block;
+        width: 100%;
+        margin: auto;
+      }
+    }
+
+    .left-side-content {
+      width: 60%;
+      text-align: center;
+      order: 1;
+
+      @include tablet {
+        width: 100%;
+        margin: auto;
+      }
+
+      .title {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        color: $text-color;
+        margin-bottom: 60px;
+
+        @include breakpoint(1380px) {
+          margin-bottom: 40px;
+        }
+
+        h1 {
+          font-size: 6em;
+          padding-bottom: 20px;
+          text-shadow: 5px 5px $site-box-shadow;
+
+          @include breakpoint(1380px) {
+            font-size: 4em;
+          }
+
+          @include breakpoint(909px) {
+            font-size: 3.2em;
+            text-shadow: 3px 3px $site-box-shadow;
+          }
+        }
+
+        h2 {
+          font-size: 2.5em;
+          text-shadow: 5px 5px $site-box-shadow;
+
+          @include breakpoint(1380px) {
+            font-size: 1.8em;
+          }
+          @include breakpoint(909px) {
+            font-size: 1.5em;
+            text-shadow: 3px 3px $site-box-shadow;
+          }
+        }
+      }
+
+      .cards-row {
+        display: flex;
+        gap: 2%;
+        justify-content: center;
+        width: 90%;
+        margin: auto;
+
+        @include tablet {
+          width: 100%;
+        }
+        @include mobile {
+          gap: 1%;
+        }
+
+        a {
+          text-decoration: none;
+          width: 20%;
+          .card {
+            border: 3px solid $site-yellow;
+            border-radius: 10px;
+            height: 70px;
+            width: 100%;
+            text-align: center;
+            padding: 20px 5px;
+            transition: height 0.2s ease-in;
+            overflow: hidden;
+            box-shadow: 4px 4px $site-box-shadow;
+
+            @include breakpoint(1380px) {
+              height: 60px;
+              padding: 17px 5px;
+            }
+            @include desktop {
+              height: 55px;
+              padding: 15px 5px;
+            }
+            @include tablet {
+              box-shadow: 2px 2px 1px $site-box-shadow;
+              border-radius: 7px;
+            }
+            @include mobile {
+              height: 40px;
+              padding: 10px 2px;
+              border-radius: 7px;
+              border-width: 1px;
+            }
+
+            h3 {
+              padding-bottom: 18px;
+              font-size: 1.2em;
+
+              @include breakpoint(1380px) {
+                font-size: 1em;
+              }
+              @include desktop {
+                font-size: 16px;
+              }
+              @include mobile {
+                font-size: 12px;
+              }
+            }
+
+            &:hover {
+              background-color: $site-yellow-transparent;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .card-1 {
+          @include breakpoint(925px) {
+            padding: 5px 5px !important;
+          }
+          @include tablet {
+            padding: 15px 5px !important;
+          }
+          @include breakpoint(496px) {
+            padding: 5px 5px !important;
+          }
+          @include mobile {
+            padding: 10px 2px !important;
+          }
+          @include breakpoint(340px) {
+            padding: 3px 2px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/// ABOUT ME SECTION
+.page-2 {
+  .about-me-img-row {
+    display: flex;
+    flex: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    width: 90%;
+    margin: auto;
+
+    .img-wrapper {
+      position: relative;
+      min-width: 320px;
+      height: 320px;
+      box-shadow: 3px 3px 2px $site-yellow;
+      transition: opacity 1s ease-in, transform 250ms ease-in;
+
+      @include desktop {
+        min-width: 250px;
+        height: 250px;
+      }
+      @include breakpoint(875px) {
+        min-width: 220px;
+        height: 220px;
+      }
+      @include tablet {
+        min-width: 180px;
+        height: 180px;
+      }
+      @include breakpoint(627px) {
+        min-width: 130px;
+        height: 130px;
+      }
+      @include mobile {
+        min-width: 90px;
+        height: 90px;
+      }
+      @include breakpoint(330px) {
+        min-width: 65px;
+        height: 65px;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+      }
+
+      .img1-cover,
+      .img2-cover,
+      .img3-cover {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.4);
+        z-index: 19;
+        transition: opacity 250ms;
+
+        &:hover {
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .about-me-text-container {
+    position: relative;
+    width: 70%;
+    height: 300px;
+    border: 2px solid $site-yellow;
+    border-radius: 10px;
+    margin: 30px auto 0 auto;
+    overflow: hidden;
+    transition: opacity 3s;
+    box-shadow: 4px 4px 1px $site-box-shadow;
+    background-color: $bg-darkblue;
+
+    @include breakpoint(1363px) {
+      height: 340px;
+    }
+    @include desktop {
+      height: 370px;
+    }
+    @include breakpoint(1062px) {
+      height: 310px;
+    }
+    @include breakpoint(899px) {
+      height: 370px;
+    }
+    @include tablet {
+      width: 90%;
+    }
+
+    p {
+      position: absolute;
+      font-size: 1.2rem;
+      top: 0;
+      left: 0;
+      padding: 30px;
+      opacity: 1;
+      transition: opacity 250ms ease-in;
+      height: auto;
+      text-align: center;
+
+      @include breakpoint(1062px) {
+        font-size: 1rem;
+      }
+      @include breakpoint(605px) {
+        font-size: 0.9rem;
+        padding: 22px;
+      }
+      @include mobile {
+        padding: 15px;
+      }
+      @include breakpoint(395px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .hide-text-section {
+      opacity: 0;
+    }
+  }
+
+  .hide-text-container {
+    opacity: 0;
+    display: none;
+  }
+}
+
+// SKILLS SECTION
+.page-3 {
+  .toolkit-row {
+    display: flex;
+    flex: row nowrap;
+    justify-content: center;
+    gap: 5%;
+    width: 90%;
+    margin: 0 auto 130px auto;
+
+    @include desktop {
+      margin: 0 auto 80px auto;
+    }
+    @include tablet {
+      margin: 0 auto 50px auto;
+    }
+    @include mobile {
+      margin: 0 auto 25px auto;
+    }
+  }
+
+  .icon-wrapper {
+    width: 160px;
+    text-align: center;
+
+    @include breakpoint(1000px) {
+      width: 110px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h4 {
+      color: rgba(255, 255, 255, 0.7);
+      @include breakpoint(640px) {
+        font-size: 0.7rem;
+      }
+      @include mobile {
+        font-size: 0.5rem;
+      }
+    }
+  }
+
+  .currently-studying-title {
+    @include breakpoint(565px) {
+      width: 200px;
+    }
+    @include breakpoint(481px) {
+      width: 240px;
+    }
+    @include breakpoint(395px) {
+      width: 300px;
+    }
+  }
+
+  .currently-studying-row {
+    display: flex;
+    flex: row nowrap;
+    justify-content: center;
+    gap: 8%;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+// PORTFOLIO SECTION
+.page-4 {
+  .portfolio-row {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    width: 95%;
+    margin: 0 auto 110px auto;
+
+    @include breakpoint(876px) {
+      gap: 2%;
+    }
+
+    @include tablet {
+      display: block;
+      margin: 0 auto 40px auto;
+    }
+
+    img {
+      width: 500px;
+      cursor: pointer;
+      margin-left: 1%;
+
+      @include breakpoint(985px) {
+        width: 400px;
+      }
+      @include breakpoint(876px) {
+        width: 350px;
+      }
+      @include tablet {
+        display: block;
+        width: 80%;
+        margin: 0 auto 30px auto;
+      }
+      // @include mobile {
+      //   max-width: 300px;
+      // }
+    }
+
+    .text-box {
+      padding: 10px 15px;
+      width: 58%;
+      border: 3px solid $site-yellow;
+      border-radius: 20px;
+      background-color: $bg-darkblue;
+      box-shadow: 4px 4px 1px $site-box-shadow;
+      margin-right: 1%;
+
+      @include tablet {
+        display: block;
+        width: 90%;
+        margin: auto;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        @include breakpoint(1410px) {
+          font-size: 1rem;
+        }
+        @include tablet {
+          text-align: center;
+        }
+        @include mobile {
+          font-size: 0.8rem;
+        }
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+
+        @include breakpoint(1410px) {
+          font-size: 0.8rem;
+        }
+        @include tablet {
+          text-align: left;
+        }
+      }
+      .aside {
+        display: inline-block;
+        font-style: italic;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+      }
+
+      .portfolio-links {
+        display: flex;
+        gap: 2%;
+        text-align: center;
+        text-decoration: none;
+
+        .link-to-code {
+          border: 2px solid $site-yellow;
+          padding: 4px;
+          border-radius: 6px;
+          cursor: pointer;
+          height: 44px;
+          a {
+            text-decoration: none;
+          }
+          h4 {
+            font-size: 0.7rem;
+          }
+          .view-code-icon {
+            font-size: 1.5rem;
+            color: $site-yellow;
+          }
+
+          &:hover {
+            background-color: $site-yellow-transparent;
+
+            .view-code-icon {
+              color: white;
+            }
+          }
+        }
+
+        .link-to-site {
+          border: 2px solid $site-yellow;
+          padding: 4px;
+          border-radius: 6px;
+          cursor: pointer;
+          height: 44px;
+          a {
+            text-decoration: none;
+          }
+          h4 {
+            font-size: 0.7rem;
+          }
+          .view-site-icon {
+            font-size: 1.2rem;
+            color: $site-yellow;
+          }
+
+          &:hover {
+            background-color: $site-yellow-transparent;
+
+            .view-site-icon {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .yellow-background-box {
+      position: absolute;
+      background-color: $site-yellow-transparent;
+      z-index: -1;
+      width: 100%;
+      height: 35px;
+      transition: width 700ms ease-in, opacity 300ms ease-in;
+
+      @include tablet {
+        height: 25px;
+      }
+      @include mobile {
+        height: 18px;
+      }
+    }
+  }
+
+  .filmbys-row {
+    .text-box {
+      text-align: right;
+      @include tablet {
+        text-align: left;
+      }
+    }
+    .yellow-background-box {
+      left: 0;
+      top: 25%;
+      box-shadow: 4px 4px 1px $site-box-shadow;
+
+      @include tablet {
+        top: 100px;
+      }
+      @include breakpoint(537px) {
+        top: 70px;
+      }
+      @include mobile {
+        top: 50px;
+      }
+    }
+
+    .filmby-links {
+      justify-content: flex-end;
+      @include tablet {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .flora-row {
+    a {
+      order: 2;
+    }
+
+    .text-box {
+      order: 1;
+    }
+    .yellow-background-box {
+      right: 0;
+      bottom: 25%;
+      box-shadow: -4px 4px 1px $site-box-shadow;
+
+      @include tablet {
+        top: 100px;
+      }
+      @include breakpoint(537px) {
+        top: 70px;
+      }
+      @include mobile {
+        top: 50px;
+      }
+    }
+    .flora-links {
+      justify-content: flex-start;
+    }
+  }
+
+  .profile-row {
+    margin: auto;
+
+    img {
+      cursor: auto;
+    }
+    .text-box {
+      text-align: right;
+      @include tablet {
+        text-align: left;
+      }
+    }
+    .yellow-background-box {
+      left: 0;
+      top: 30%;
+      box-shadow: 4px 4px 1px $site-box-shadow;
+
+      @include tablet {
+        top: 100px;
+      }
+      @include breakpoint(537px) {
+        top: 70px;
+      }
+      @include mobile {
+        top: 50px;
+      }
+    }
+    .profile-links {
+      justify-content: flex-end;
+      @include tablet {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+/// CONTACT SECTION
+.page-5 {
+  text-align: center;
+  .center-title {
+    display: flex;
+    flex: row nowrap;
+    justify-content: center;
+    gap: 5%;
+    width: 90%;
+    margin: 0 auto 50px auto;
+
+    @include tablet {
+      margin: 0 auto 30px auto;
+    }
+    @include mobile {
+      margin: 0 auto 20px auto;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      text-shadow: 4px 4px $site-box-shadow;
+      @include desktop {
+        font-size: 2rem;
+      }
+      @include breakpoint(1010px) {
+        font-size: 1.7rem;
+      }
+      @include breakpoint(860px) {
+        font-size: 1.4rem;
+      }
+      @include breakpoint(707px) {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  p {
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 0.8rem;
+      margin-bottom: 25px;
+    }
+  }
+
+  .contact-form {
+    display: block;
+    width: 900px;
+    margin: 0 auto 30px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 2px solid $site-yellow;
+    padding: 30px;
+    box-shadow: 4px 4px 1px $site-box-shadow;
+
+    @include desktop {
+      width: 700px;
+    }
+    @include tablet {
+      width: 95%;
+    }
+
+    input,
+    button {
+      display: block;
+    }
+
+    input {
+      height: 40px;
+      width: 80%;
+      padding: 10px;
+      color: black;
+      margin: 0 auto 20px auto;
+
+      @include tablet {
+        width: 95%;
+      }
+    }
+
+    .message {
+      color: black;
+      width: 80%;
+      height: 200px;
+      padding: 10px;
+      margin-bottom: 20px;
+      resize: none;
+
+      @include tablet {
+        width: 95%;
+      }
+    }
+
+    button {
+      width: 60px;
+      height: 30px;
+      color: black;
+      margin: auto;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
